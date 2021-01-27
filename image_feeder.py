@@ -166,7 +166,7 @@ class ImageFeeder(SocketCommunicator):
             message = 'Closed' if self.results[key] == 0 else 'Open'
             image = self.sent_images[key]
             image = cv2.resize(image, (200, 200))
-            image = cv2.putText(image, message, (12, 12), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 4)
+            image = cv2.putText(image, message, (15, 15), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 4)
             self.sent_images[key] = image
 
         for ik, key in enumerate(self.sent_images.keys()):
